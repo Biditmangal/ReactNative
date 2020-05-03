@@ -12,7 +12,6 @@ import {
   Text,
   View,
   Image,
-  ScrollView,
   TouchableOpacity,
   ListView
 } from 'react-native';
@@ -88,7 +87,7 @@ const styles = StyleSheet.create({
     fontSize:18,
     color:"#00BFFF",
     marginLeft:10,
-    marignTop:10,
+    marginTop:10,
     alignSelf: 'center'
   },
   btn:{
