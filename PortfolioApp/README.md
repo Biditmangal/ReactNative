@@ -14,12 +14,15 @@ Home
     - [ ] Linkedin-Button
     - [ ] Twitter-button
     - [ ] Instagram-button
-    - [ ] Facebook-button
+    - [ ] Facebook-button  
+      
 Work
   - [ ] Projects-List view-box
-  - [ ] Achievements-List View
+  - [ ] Achievements-List View  
+    
 Skills
   - [ ] All the skills in a progress bar-List View
+    
 Contact-Form
   - [ ] Name -box
   - [ ] Email-box
