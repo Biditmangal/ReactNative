@@ -1,11 +1,12 @@
-	
-Screens-In a Tabbed Activity  
-1. About  
+My Progress for the App:-  
+
+- [X] Screens-In a Tabbed Activity  
+1. Home  
  2. Work  
   3. Skills  
    4. Contact  
       
-About  
+Home  
   - [ ] Profile Photo- Image
   - [ ] Description-box
   - [ ] Social Media
@@ -22,5 +23,5 @@ Skills
 Contact-Form
   - [ ] Name -box
   - [ ] Email-box
-  - [ ] Description-box
+  - [ ] Message-box
   - [ ] Submit-button
