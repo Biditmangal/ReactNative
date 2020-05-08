@@ -20,22 +20,48 @@ export const styles = StyleSheet.create({
         marginBottom: 16,
         textTransform:'uppercase',
     },
-    contact1:{
-        flex:2,
-        marginTop: 40,
+    contact:{
+        flex:1,
         marginLeft: 10,
         borderColor:'black',
-
-    },
-
-    contact2:{
-        flex:4,
         justifyContent:'center',
-        marginLeft: 10,
+        alignItems:'center',
+        margin: 10,
     },
-    text:{
-        color:'blue',
-        marginBottom:10,
-        borderColor: 'black'
+    contactHeader:{
+        justifyContent:'center',
+        fontSize: 30,
+        fontColor: 'black',
+        marginBottom: 20,
     },
+    username:{
+        marginTop:10,
+        height: 40,
+        width: '90%',
+        borderWidth:1,
+        borderColor: '#000',
+        borderRadius:2,
+        padding:10,
+    },
+    message:{
+        marginTop:10,
+        height: '30%',
+        width: '90%',
+        borderWidth:1,
+        borderColor: '#000',
+        borderRadius:2,
+        padding:5,
+    },
+    submit:{
+        marginTop:20,
+        width:'45%',
+        height: 40,
+        borderRadius: 20,
+        borderColor: '#000',
+        borderWidth:0.5,
+        backgroundColor: 'cyan',
+        justifyContent:'center',
+        alignItems:'center',
+        textTransform: 'uppercase',
+    }
 });

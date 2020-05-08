@@ -29,7 +29,7 @@ export default class App extends Component {
                       component={Home}
                       options={{
                           tabBarIcon: () => (
-                          <Icon style={{ color: 'black' }} size={27} name={'home'} />)
+                          <Icon style={{ color: 'black',}} size={27} name={'home'} />)
                       }}/>
                   <Tab.Screen
                       name="Work"
