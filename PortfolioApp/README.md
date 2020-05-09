@@ -21,8 +21,17 @@ Work
   - [ ] Achievements-List View  
 
 Skills
-  - [ ] All the skills in a progress bar-List View
-
+  - [x] All the skills in a progress bar-List View  
+    - CardStyleView nested in FlatListView 
+	    - ProgressBar with skill name for that skill 
+	    - With Icon Beside it to the left  
+	          
+    Some Future Update Ideas  
+    - SectionList View
+        - Sections having Tech name and then FlatListView under each Tech name
+    - GridView having Card of each Skill
+        - Each card will have a Circle of Skill with a score
+    - Fetching data about skills from some database and showing them in a FlatList View
 Contact-Form
   - [X] Name -box
   - [X] Email-box
