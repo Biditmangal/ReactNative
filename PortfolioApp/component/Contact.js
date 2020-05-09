@@ -27,12 +27,19 @@ export default class Contact extends Component{
                     placeholder={'Message'}
                     underlineColorAndroid="transparent"
                     multiline={true}
+                    numberOfLines={4}
+                    textAlignVertical={"top"}
                 />
                 <TouchableOpacity
-                    style={styles.submit}
+                    style={styles.submitButton}
                     onPress={this.myfunc}
-                >
-                    <Text>Submit</Text>
+                    >
+                    <Text style={{
+                        color:'white',
+                        textTransform: "uppercase"
+                    }}>
+                        Submit
+                    </Text>
 
                 </TouchableOpacity>
             </View>

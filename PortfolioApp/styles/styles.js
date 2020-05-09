@@ -1,67 +1,121 @@
 import {StyleSheet} from "react-native";
 
 export const styles = StyleSheet.create({
-    center:{
-        flex:1,
+    center: {
+        flex: 1,
         justifyContent: 'center',
-        alignItems:'center',
+        alignItems: 'center',
     },
-    title:{
-        fontSize:36,
-        marginBottom:16,
+    title: {
+        fontSize: 36,
+        marginBottom: 16,
     },
     button: {
         alignItems: "center",
         backgroundColor: "#DDDDDD",
         padding: 10,
-        marginTop:10,
+        marginTop: 10,
     },
-    container:{
+    container: {
         marginBottom: 16,
-        textTransform:'uppercase',
+        textTransform: 'uppercase',
+        alignItems: 'center',
     },
-    contact:{
-        flex:1,
-        marginLeft: 10,
-        borderColor:'black',
-        justifyContent:'center',
+    SkillContainer: {
+        flex: 1,
+        justifyContent: 'center',
         alignItems:'center',
+        backgroundColor: 'black',
+    },
+    SkillHeader: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    SkillTitle: {
+        fontSize: 36,
+        color: 'white',
+        fontFamily: "Arial",
+    },
+    SkillBody: {
+        flex: 5,
+        margin: 10,
+        marginBottom:20,
+        height:50,
+        borderColor: 'black',
+        borderWidth: 1,
+        backgroundColor: 'white',
+        borderRadius: 2,
+        padding: 5,
+        justifyContent:'center',
+        width:500,
+    },
+    SkillList: {
+        flex: 5,
+        flexDirection: 'row',
+        fontSize: 48,
+        padding: 20,
+        justifyContent: 'flex-start',
+        textTransform: 'uppercase',
+    },
+    Skill: {
+        flex: 1,
+        marginTop: 10,
+        height: 50,
+        borderColor: 'black',
+        borderWidth: 1,
+        backgroundColor: 'white',
+        borderRadius: 2,
+        padding: 5,
+    },
+    SkillText: {
+        fontSize: 20,
+        marginBottom: 5,
+        fontFamily:"sans",
+    },
+    ProgressView: {
+        marginBottom: 10,
+    },
+    contact: {
+        flex: 1,
+        marginLeft: 10,
+        borderColor: 'black',
+        justifyContent: 'center',
+        alignItems: 'center',
         margin: 10,
     },
-    contactHeader:{
-        justifyContent:'center',
+    contactHeader: {
+        justifyContent: 'center',
         fontSize: 30,
-        fontColor: 'black',
         marginBottom: 20,
     },
-    username:{
-        marginTop:10,
+    username: {
+        marginTop: 10,
         height: 40,
-        width: '90%',
-        borderWidth:1,
+        width: 350,
+        borderWidth: 1,
         borderColor: '#000',
-        borderRadius:2,
-        padding:10,
+        borderRadius: 2,
+        padding: 10,
     },
-    message:{
-        marginTop:10,
+    message: {
+        marginTop: 10,
         height: '30%',
-        width: '90%',
-        borderWidth:1,
+        width: 350,
+        borderWidth: 1,
         borderColor: '#000',
-        borderRadius:2,
-        padding:5,
+        borderRadius: 2,
+        padding: 5,
     },
-    submit:{
-        marginTop:20,
-        width:'45%',
+    submitButton: {
+        marginTop: 20,
+        width: 200,
         height: 40,
         borderRadius: 20,
         borderColor: '#000',
-        borderWidth:0.5,
-        backgroundColor: 'cyan',
-        justifyContent:'center',
-        alignItems:'center',
-        textTransform: 'uppercase',
+        borderWidth: 0.5,
+        backgroundColor: 'black',
+        justifyContent: 'center',
+        alignItems: 'center',
     }
 });
