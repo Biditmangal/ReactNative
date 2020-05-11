@@ -3,6 +3,7 @@ import {View,Text,TouchableOpacity,TextInput} from "react-native";
 import {styles} from "../styles/styles"
 
 export default class Contact extends Component{
+
     myfunc(){
         alert('HelloWorld');
     }

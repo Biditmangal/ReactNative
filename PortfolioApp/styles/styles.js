@@ -21,6 +21,30 @@ export const styles = StyleSheet.create({
         textTransform: 'uppercase',
         alignItems: 'center',
     },
+    ProjectBody:{
+        flex: 5,
+        margin: 10,
+        marginBottom:20,
+        borderColor: 'cyan',
+        borderWidth: 2,
+        backgroundColor: 'white',
+        borderRadius: 2,
+        padding: 5,
+        justifyContent:'center',
+        width:'90%',
+    },
+    ProjectList:{
+        flex: 1,
+        fontSize: 20,
+        padding: 10,
+        borderColor:'red',
+        borderWidth: 2,
+        textTransform: 'uppercase',
+        scroll:'true'
+    },
+    AchievementBody:{
+
+    },
     SkillContainer: {
         flex: 1,
         justifyContent: 'center',
@@ -48,11 +72,10 @@ export const styles = StyleSheet.create({
         borderRadius: 2,
         padding: 5,
         justifyContent:'center',
-        width:500,
+        width:'90%',
     },
     SkillList: {
-        flex: 5,
-        flexDirection: 'row',
+        flex: 1,
         fontSize: 48,
         padding: 20,
         justifyContent: 'flex-start',

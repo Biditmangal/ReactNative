@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {View,Text,Button,TouchableOpacity} from "react-native";
 
 import {NavigationContainer} from "@react-navigation/native";
-import {createMaterialBottomTabNavigator} from "@react-navigation/material-bottom-tabs";
 import {createMaterialTopTabNavigator} from "@react-navigation/material-top-tabs";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {styles} from "./styles/styles"
@@ -13,6 +12,7 @@ import Work from "./component/Work";
 import Skills from "./component/Skills";
 
 const Tab=createMaterialTopTabNavigator();
+
 export default class App extends Component {
     render() {
         return (

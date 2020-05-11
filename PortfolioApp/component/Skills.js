@@ -28,7 +28,6 @@ export default class Skills extends Component {
                                 {title: 'React', score: '0.3', name: 'adjust'},
                                 {title: 'Native', score: '0.9', name: 'account-star'},
                                 {title: 'Web', score: '0.5', name: 'adjust'},
-                                {title: 'Android', score: '0.6', name: 'adjust'},
                                 {title: 'IOS', score: '0.4', name: 'account-star'},
                                 {title: 'Python', score: '0.8', name: 'adjust'},
                                 {title: 'React', score: '0.3', name: 'account-star'},
@@ -41,10 +40,13 @@ export default class Skills extends Component {
                                         flex: 1,
                                         flexDirection: 'row',
                                         marginTop: 10,
-                                        alignItems: 'center',
                                     }}>
                                         <View style={{
                                             flex: 1,
+                                            justifyContent:'flex-end',
+                                            flexDirection:'row',
+                                            marginRight:10,
+                                            alignItems:'center,'
                                         }}>
                                             <Icon style={{color: 'black',}} size={27} name={item.name}/>
                                         </View>
