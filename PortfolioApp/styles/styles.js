@@ -21,6 +21,15 @@ export const styles = StyleSheet.create({
         textTransform: 'uppercase',
         alignItems: 'center',
     },
+    ProjectPanel:{
+        margin:10,
+        borderRadius:10,
+    },
+    ProjectPanelText:{
+        margin:8,
+        fontSize:15,
+        color:'darkviolet',
+    },
     ProjectBody:{
         flex: 5,
         margin: 10,
@@ -40,10 +49,21 @@ export const styles = StyleSheet.create({
         borderColor:'red',
         borderWidth: 2,
         textTransform: 'uppercase',
-        scroll:'true'
     },
-    AchievementBody:{
-
+    AchievementContainer:{
+        flex:1,
+        justifyContent:'center',
+        alignItems:'center',
+        margin:10,
+        marginBottom:20,
+        width:'90%',
+    },
+    AchievementList:{
+        flex: 1,
+        fontSize: 48,
+        padding: 20,
+        justifyContent: 'flex-start',
+        textTransform: 'uppercase',
     },
     SkillContainer: {
         flex: 1,

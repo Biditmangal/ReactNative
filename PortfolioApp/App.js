@@ -36,6 +36,9 @@ export default class App extends Component {
                         showIcon: true,
                         activeTintColor: 'blue',
                         inactiveTintColor: 'black',
+                        indicatorStyle:{
+                            position:'top',
+                        }
                     }}>
                     <TopTab.Screen name="Projects" component={Project}/>
                     <TopTab.Screen name="Achievements" component={Achievement}/>
@@ -46,7 +49,7 @@ export default class App extends Component {
 
     render() {
         return (
-            <NavigationContainer>
+            <NavigationContainer >
                 <Tab.Navigator
                     tabBarPosition={'bottom'}
                     tabBarOptions={{
@@ -54,6 +57,7 @@ export default class App extends Component {
                         activeTintColor: 'blue',
                         inactiveTintColor: 'black',
                         swipeEnabled: false,
+                        allowFontScaling:true,
                     }}>
                     <Tab.Screen
                         name="Home"
