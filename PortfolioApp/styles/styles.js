@@ -1,4 +1,5 @@
 import {StyleSheet} from "react-native";
+import {computeWindowedRenderLimits} from "react-native-web/dist/vendor/react-native/VirtualizeUtils";
 
 export const styles = StyleSheet.create({
     center: {
@@ -21,55 +22,58 @@ export const styles = StyleSheet.create({
         textTransform: 'uppercase',
         alignItems: 'center',
     },
-    ProjectPanel:{
-        margin:10,
-        borderRadius:10,
-    },
-    ProjectPanelText:{
-        margin:8,
-        fontSize:15,
-        color:'darkviolet',
-    },
     ProjectBody:{
-        flex: 5,
-        margin: 10,
-        marginBottom:20,
-        borderColor: 'cyan',
-        borderWidth: 2,
-        backgroundColor: 'white',
-        borderRadius: 2,
+        flex: 1,
+        margin: 3,
+        height:10,
         padding: 5,
         justifyContent:'center',
-        width:'90%',
     },
     ProjectList:{
         flex: 1,
         fontSize: 20,
-        padding: 10,
-        borderColor:'red',
-        borderWidth: 2,
-        textTransform: 'uppercase',
+        padding: 20,
+        justifyContent:'center',
+    },
+    ProjectPanel:{
+        margin:10,
+        // alignItems:'center',
+        borderRadius:10,
+    },
+    ProjectPanelText:{
+        margin:8,
+        allowFontScaling:true,
     },
     AchievementContainer:{
-        flex:1,
-        justifyContent:'center',
-        alignItems:'center',
-        margin:10,
+        flex: 1,
+        margin: 3,
         marginBottom:20,
-        width:'90%',
+        height:50,
+        borderRadius: 2,
+        padding: 5,
+        justifyContent:'center',
     },
     AchievementList:{
         flex: 1,
         fontSize: 48,
         padding: 20,
         justifyContent: 'flex-start',
+    },
+    AchievementText: {
         textTransform: 'uppercase',
+        marginBottom: 5,
+        adjustsFontSizeToFit:true,
+        allowFontScaling:true,
+    },
+    DescriptionText: {
+        marginBottom: 10,
+        adjustsFontSizeToFit:true,
+        allowFontScaling:true,
     },
     SkillContainer: {
         flex: 1,
         justifyContent: 'center',
         alignItems:'center',
-        backgroundColor: 'black',
     },
     SkillHeader: {
         flex: 1,
@@ -78,16 +82,12 @@ export const styles = StyleSheet.create({
     },
     SkillTitle: {
         fontSize: 36,
-        color: 'white',
-        fontFamily: "Arial",
     },
     SkillBody: {
         flex: 5,
         margin: 10,
         marginBottom:20,
         height:50,
-        borderColor: 'black',
-        borderWidth: 1,
         backgroundColor: 'white',
         borderRadius: 2,
         padding: 5,
@@ -101,18 +101,8 @@ export const styles = StyleSheet.create({
         justifyContent: 'flex-start',
         textTransform: 'uppercase',
     },
-    Skill: {
-        flex: 1,
-        marginTop: 10,
-        height: 50,
-        borderColor: 'black',
-        borderWidth: 1,
-        backgroundColor: 'white',
-        borderRadius: 2,
-        padding: 5,
-    },
     SkillText: {
-        fontSize: 20,
+        fontSize: 16,
         marginBottom: 5,
         fontFamily:"sans",
     },

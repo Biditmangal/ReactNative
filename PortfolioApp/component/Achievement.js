@@ -36,27 +36,57 @@ const list = [
 export default class Achievement extends Component {
     render() {
         return (
-            <ScrollView>
-                <Card containerStyle={{
-                    flex: 1,
-                    height: 50,
-                }}>
-                    {
-                        list.map((item, i) => (
+            <View style={styles.AchievementContainer}>
+                <View style={styles.AchievementList}>
+                    <FlatList
+                        showsVerticalScrollIndicator={false}
+                        data={[
+                            {title: 'Achievement 1', name: 'adjust'},
+                            {title: 'Achievement 2', name: 'account-star'},
+                            {title: 'Achievement 3', name: 'adjust'},
+                            {title: 'Achievement 4', name: 'account-star'},
+                            {title: 'Achievement 5', name: 'adjust'},
+                            {title: 'Achievement 6', name: 'account-star'},
+                            {title: 'Achievement 7', name: 'adjust'},
+                            {title: 'Achievement 8', name: 'account-star'},
+                        ]}
+                        renderItem={({item}) =>
                             <Card>
-                                <ListItem
-                                    key={i}
-                                    title={item.title}
-                                    titleStyle={{
-                                        marginLeft: 10,
-                                    }}
-                                    leftIcon={{name: item.name}}
-                                />
+                                <View style={{
+                                    flex: 1,
+                                    flexDirection: 'row',
+                                    marginTop: 10,
+                                }}>
+                                    <View style={{
+                                        flex: 1,
+                                        justifyContent: 'flex-end',
+                                        flexDirection: 'row',
+                                        marginRight: 10,
+                                        alignItems: 'center,'
+                                    }}>
+                                        <Icon style={{color: 'black',}} size={27} name={item.name}/>
+                                    </View>
+                                    <View style={{
+                                        flex: 8,
+                                    }}>
+                                        <Text style={styles.AchievementText}>
+                                            {item.title}
+                                        </Text>
+                                        <View style={styles.DescriptionText}>
+                                            <Text style={{
+                                                opacity: 0.5,
+                                            }}>
+                                                Description
+                                            </Text>
+                                        </View>
+                                    </View>
+                                </View>
                             </Card>
-                        ))
-                    }
-                </Card>
-            </ScrollView>
+                        }
+
+                    />
+                </View>
+            </View>
         );
     }
 }
