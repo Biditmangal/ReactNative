@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {View, Text, Button, TouchableOpacity} from "react-native";
 import {Header} from "react-native-elements";
+import * as firebase from "firebase/app";
+import "firebase/database";
 
 import {NavigationContainer} from "@react-navigation/native";
 import {createMaterialTopTabNavigator} from "@react-navigation/material-top-tabs";
@@ -10,14 +12,27 @@ import {styles} from "./styles/styles"
 
 import Home from "./component/Home"
 import Contact from "./component/Contact";
-import Work from "./component/Work";
 import Skills from "./component/Skills";
 import Project from "./component/Project";
 import Achievement from "./component/Achievement";
 
+const firebaseConfig = {
+    apiKey: "AIzaSyDkedJPadEa1yWX_gwXMvR45oBUiWvh9no",
+    authDomain: "portfolioapp-e8c63.firebaseapp.com",
+    databaseURL: "https://portfolioapp-e8c63.firebaseio.com",
+    projectId: "portfolioapp-e8c63",
+    storageBucket: "portfolioapp-e8c63.appspot.com",
+    messagingSenderId: "583969798672",
+    appId: "1:583969798672:web:e2edf32b022a1914f32895",
+    measurementId: "G-Z95BFP8V8F"
+};
+
+firebase.initializeApp(firebaseConfig);
+const database = firebase.database();
 
 const Tab = createMaterialTopTabNavigator();
 const TopTab = createMaterialTopTabNavigator();
+
 
 export default class App extends Component {
 
