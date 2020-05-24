@@ -1,14 +1,61 @@
 import React, {Component} from 'react';
-import {View,Text,TouchableOpacity,TextInput} from "react-native";
+import {
+    View,
+    Text,
+    TouchableOpacity,
+    TextInput
+} from "react-native";
 import {styles} from "../styles/styles"
+import Firebase from "../FirebaseConfig";
 
-export default class Contact extends Component{
+export default class Contact extends Component {
 
-    myfunc(){
-        alert('HelloWorld');
+    constructor() {
+        super();
+        this.state = {
+            name: '',
+            email: '',
+            message: '',
+        }
     }
+
+    onNameChange = (text) => {
+        this.setState({
+            name: text,
+        })
+    }
+
+    onEmailChange = (text) => {
+        this.setState({
+            email: text,
+        })
+    }
+
+    onMessageChange = (text) => {
+        this.setState({
+            message: text,
+        })
+    }
+
+    submitHandler = (event) => {
+        event.preventDefault();
+        Firebase.database().ref('Messages/').push({
+            name: this.state.name,
+            email: this.state.email,
+            message: this.state.message
+        }).then(() =>
+            alert('Your Message has been sent')
+        ).catch((error) =>
+                alert('Sorry,This happened: ' + error)
+            )
+        this.setState({
+            message: '',
+        })
+
+    }
+
     render() {
-        return(
+        return (
             <View style={styles.contact}>
                 <Text style={styles.contactHeader}>
                     Contact Me
@@ -17,25 +64,31 @@ export default class Contact extends Component{
                     style={styles.username}
                     placeholder={'Name'}
                     underlineColorAndroid="transparent"
+                    value={this.state.name}
+                    onChangeText={(text => this.onNameChange(text))}
                 />
                 <TextInput
                     style={styles.username}
                     placeholder={'Email'}
+                    value={this.state.email}
                     underlineColorAndroid="transparent"
+                    onChangeText={(text => this.onEmailChange(text))}
                 />
                 <TextInput
                     style={styles.message}
                     placeholder={'Message'}
+                    value={this.state.message}
                     underlineColorAndroid="transparent"
                     multiline={true}
                     numberOfLines={4}
+                    onChangeText={(text => this.onMessageChange(text))}
                 />
                 <TouchableOpacity
                     style={styles.submitButton}
-                    onPress={this.myfunc}
-                    >
+                    onPress={this.submitHandler}
+                >
                     <Text style={{
-                        color:'white',
+                        color: 'white',
                         textTransform: "uppercase"
                     }}>
                         Submit
