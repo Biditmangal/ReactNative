@@ -1,23 +1,15 @@
 import React, {Component} from 'react';
-import {
-    View,
-    Text,
-    Button,
-    TouchableOpacity
-} from "react-native";
-import {Header} from "react-native-elements";
+import {View} from "react-native";
 
 import {NavigationContainer} from "@react-navigation/native";
 import {createMaterialTopTabNavigator} from "@react-navigation/material-top-tabs";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-
 
 import Home from "./component/Home"
 import Contact from "./component/Contact";
 import Skills from "./component/Skills";
 import Project from "./component/Project";
 import Achievement from "./component/Achievement";
-
 
 const Tab = createMaterialTopTabNavigator();
 const TopTab = createMaterialTopTabNavigator();
@@ -30,10 +22,6 @@ export default class App extends Component {
             <View style={{
                 flex: 1,
             }}>
-                {/*<Header*/}
-                {/*    centerComponent={{text: 'WORK', style: {color: 'white'}}}*/}
-                {/*    containerStyle={{height:50,backgroundColor: 'black',}}*/}
-                {/*/>*/}
                 <TopTab.Navigator
                     tabBarPosition={'bottom'}
                     tabBarOptions={{
