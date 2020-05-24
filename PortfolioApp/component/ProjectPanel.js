@@ -25,12 +25,16 @@ const ProjectPanel = (item) => {
                     <Text style={{
                         fontSize: 14,
                         opacity: 0.8,
-                    }}>Duration:</Text>
+                    }}>
+                        Duration:
+                    </Text>
                     <Text style={{
                         fontSize: 14,
                         marginRight: 5,
                         opacity: 0.8,
-                    }}>Organisation:</Text>
+                    }}>
+                        Organisation:
+                    </Text>
                 </View>
                 <View style={{
                     flexDirection: 'row',
@@ -40,10 +44,14 @@ const ProjectPanel = (item) => {
                 }}>
                     <Text style={{
                         fontSize: 12,
-                    }}>{item.duration + ' months'}</Text>
+                    }}>
+                        {item.duration + (item.duration === 1 ? ' month':' months')}
+                    </Text>
                     <Text style={{
                         fontSize: 12,
-                    }}>{item.organization}</Text>
+                    }}>
+                        {item.organization}
+                    </Text>
                 </View>
                 <View style={{
                     flexDirection: 'row',

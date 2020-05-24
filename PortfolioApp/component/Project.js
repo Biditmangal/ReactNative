@@ -30,11 +30,9 @@ export default class Project extends Component {
         });
     }
 
-
     dataToRender = () => {
         return [...this.state.projects];
     }
-
 
     render() {
         return (
