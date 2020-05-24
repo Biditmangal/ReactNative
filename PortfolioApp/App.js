@@ -5,11 +5,11 @@ import {NavigationContainer} from "@react-navigation/native";
 import {createMaterialTopTabNavigator} from "@react-navigation/material-top-tabs";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import Home from "./component/Home"
-import Contact from "./component/Contact";
-import Skills from "./component/Skills";
-import Project from "./component/Project";
-import Achievement from "./component/Achievement";
+import Home from "./screens/Home"
+import Contact from "./screens/Contact";
+import Skills from "./screens/Skills";
+import Project from "./screens/Project";
+import Achievement from "./screens/Achievement";
 
 const Tab = createMaterialTopTabNavigator();
 const TopTab = createMaterialTopTabNavigator();

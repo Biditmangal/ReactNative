@@ -4,7 +4,7 @@ import {
     FlatList,
 } from "react-native";
 import {styles} from "../styles/styles";
-import ProjectPanel from "./ProjectPanel";
+import ProjectPanel from "../component/ProjectPanel";
 import Firebase from "../FirebaseConfig";
 
 

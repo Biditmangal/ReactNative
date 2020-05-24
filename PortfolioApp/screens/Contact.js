@@ -46,13 +46,20 @@ export default class Contact extends Component {
         }).then(() =>
             alert('Your Message has been sent')
         ).catch((error) =>
-                alert('Sorry,This happened: ' + error)
-            )
+            alert('Sorry,This happened: ' + error)
+        )
         this.setState({
             message: '',
         })
 
     }
+    // fetchdata = () => {
+    //     Firebase.database().ref('Messages/').on('value', (snapshot) => {
+    //         for (let i in snapshot.val()) {
+    //             console.log(snapshot.val()[i])
+    //         }
+    //     });
+    // }
 
     render() {
         return (

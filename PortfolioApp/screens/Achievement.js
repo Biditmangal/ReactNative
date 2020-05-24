@@ -5,7 +5,7 @@ import {
 } from "react-native";
 import {styles} from "../styles/styles"
 import Firebase from "../FirebaseConfig";
-import AchievementCard from "./AchievementCard";
+import AchievementCard from "../component/AchievementCard";
 
 export default class Achievement extends Component {
     constructor() {

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {FlatList, Text, View,} from "react-native";
 import {styles} from "../styles/styles"
 import Firebase from "../FirebaseConfig";
-import SkillCard from "./SkillCard";
+import SkillCard from "../component/SkillCard";
 
 export default class Skills extends Component {
     constructor() {
