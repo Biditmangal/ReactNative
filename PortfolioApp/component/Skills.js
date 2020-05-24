@@ -12,9 +12,9 @@ export default class Skills extends Component {
         };
     }
 
-    componentDidMount() {
+    componentDidMount = () => {
         Firebase.database().ref('Skills/').on('value', (snapshot) => {
-            let skill = snapshot.val() ? snapshot.val() : {};
+            let skill = snapshot.val() ? snapshot.val() : [];
             let i;
             let data = [];
             for (i in skill) {
