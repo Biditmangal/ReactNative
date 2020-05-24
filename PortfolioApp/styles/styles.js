@@ -1,5 +1,4 @@
 import {StyleSheet} from "react-native";
-import {computeWindowedRenderLimits} from "react-native-web/dist/vendor/react-native/VirtualizeUtils";
 
 export const styles = StyleSheet.create({
     center: {
@@ -31,18 +30,16 @@ export const styles = StyleSheet.create({
     },
     ProjectList:{
         flex: 1,
-        fontSize: 20,
         padding: 20,
         justifyContent:'center',
     },
     ProjectPanel:{
         margin:10,
-        // alignItems:'center',
         borderRadius:10,
+        height:10,
     },
     ProjectPanelText:{
         margin:8,
-        allowFontScaling:true,
     },
     AchievementContainer:{
         flex: 1,
@@ -55,20 +52,15 @@ export const styles = StyleSheet.create({
     },
     AchievementList:{
         flex: 1,
-        fontSize: 48,
         padding: 20,
         justifyContent: 'flex-start',
     },
     AchievementText: {
         textTransform: 'uppercase',
         marginBottom: 5,
-        adjustsFontSizeToFit:true,
-        allowFontScaling:true,
     },
     DescriptionText: {
         marginBottom: 10,
-        adjustsFontSizeToFit:true,
-        allowFontScaling:true,
     },
     SkillContainer: {
         flex: 1,
@@ -96,15 +88,12 @@ export const styles = StyleSheet.create({
     },
     SkillList: {
         flex: 1,
-        fontSize: 48,
         padding: 20,
         justifyContent: 'flex-start',
-        textTransform: 'uppercase',
     },
     SkillText: {
         fontSize: 16,
         marginBottom: 5,
-        fontFamily:"sans",
     },
     ProgressView: {
         marginBottom: 10,

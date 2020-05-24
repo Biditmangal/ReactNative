@@ -29,7 +29,6 @@ export default class Contact extends Component{
                     underlineColorAndroid="transparent"
                     multiline={true}
                     numberOfLines={4}
-                    textAlignVertical={"top"}
                 />
                 <TouchableOpacity
                     style={styles.submitButton}

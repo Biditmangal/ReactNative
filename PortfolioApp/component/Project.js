@@ -102,7 +102,7 @@ export default class Project extends Component {
                         ]}
                         renderItem={({item}) =>
                             <Panel
-                                header={'Project ' + item.id}
+                                header={`Project ${item.id}`}
                                 style={styles.ProjectPanel}
                             >
                                 <View style={{

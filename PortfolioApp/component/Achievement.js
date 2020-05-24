@@ -6,9 +6,12 @@ import {
     FlatList
 } from "react-native";
 import {styles} from "../styles/styles"
-import {Header, Card, ListItem} from "react-native-elements";
+import {
+    Header,
+    Card,
+    ListItem,
+} from "react-native-elements";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-import ProgressBar from "react-native-progress-fixed/Bar";
 
 const list = [
     {
@@ -62,7 +65,7 @@ export default class Achievement extends Component {
                                         justifyContent: 'flex-end',
                                         flexDirection: 'row',
                                         marginRight: 10,
-                                        alignItems: 'center,'
+                                        alignItems: 'center'
                                     }}>
                                         <Icon style={{color: 'black',}} size={27} name={item.name}/>
                                     </View>
