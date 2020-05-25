@@ -5,12 +5,12 @@ My Progress for the App:-
 2. Work  
 3. Skills  
 4. Contact  
-
+---
 Home  
   - [X] Profile Photo- Image
   - [X] Description-box
   - [ ] Social Media links 
-
+---
 Work
 - [x]  A bottomBar with 2 tabs Projects and Achievements and in each Tab there will be expandable panels/cards containing details of the respective tab
 	- Project Tab
@@ -26,7 +26,7 @@ Work
 				- header will have name of the achievement 
 				- content will have
 					- Achievement description  
-
+---
 Skills
   - [x] All the skills in a progress bar-List View  
     - CardStyleView nested in FlatListView 
@@ -38,17 +38,13 @@ Skills
         - Sections having Tech name and then FlatListView under each Tech name
     - GridView having Card of each Skill
         - Each card will have a Circle of Skill with a score
-    - Fetching data about skills from some database and showing them in a FlatList View  
-  
+        
+---
 Contact
   - [X] Name -box
   - [X] Email-box
   - [X] Message-box
   - [X] Submit-button
-    
-      
-  \
-  \
-Major Update:
-   - Configured Firerbase to the app.Now the features can be updated in realtime.
 
+---
+ - [x] Fetching data from Firebase database and can be updated in realtime.
