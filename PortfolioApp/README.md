@@ -7,14 +7,14 @@ My Progress for the App:-
 4. Contact  
 
 Home  
-  - [ ] Profile Photo- Image
-  - [ ] Description-box
+  - [X] Profile Photo- Image
+  - [X] Description-box
   - [ ] Social Media links 
 
 Work
 - [x]  A bottomBar with 2 tabs Projects and Achievements and in each Tab there will be expandable panels/cards containing details of the respective tab
 	- Project Tab
-		- panels will have a header and a content view
+		- [x] panels will have a header and a content view
 			- header will have name of the project
 			- in content view there will be 
 				- brief description of project 
@@ -22,7 +22,7 @@ Work
 				- Organization
 				- and a github link if possible or the link to the live project
 		- Achievement Tab
-			- cards will have a header and a content view
+			- [x] cards will have a header and a content view
 				- header will have name of the achievement 
 				- content will have
 					- Achievement description  
@@ -45,3 +45,10 @@ Contact
   - [X] Email-box
   - [X] Message-box
   - [X] Submit-button
+    
+      
+  \
+  \
+Major Update:
+   - Configured Firerbase to the app.Now the features can be updated in realtime.
+
