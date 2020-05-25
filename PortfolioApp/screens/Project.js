@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {
     View,
     FlatList,
+    TouchableOpacity,
+    Text,
 } from "react-native";
 import {styles} from "../styles/styles";
 import ProjectPanel from "../component/ProjectPanel";
@@ -9,8 +11,8 @@ import Firebase from "../FirebaseConfig";
 
 
 export default class Project extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             projects: []
         };
@@ -30,20 +32,25 @@ export default class Project extends Component {
         });
     }
 
-    dataToRender = () => {
-        return [...this.state.projects];
-    }
-
     render() {
         return (
             <View style={styles.ProjectBody}>
                 <View style={styles.ProjectList}>
                     <FlatList
                         showsVerticalScrollIndicator={false}
-                        data={this.dataToRender()}
+                        data={[...this.state.projects]}
                         renderItem={({item}) => ProjectPanel(item)}
                     />
                 </View>
+                {/*<TouchableOpacity*/}
+                {/*    style={{*/}
+                {/*        backgroundColor:'#fff'*/}
+                {/*    }}*/}
+                {/*    onPress={() => {*/}
+                {/*        this.props.navigation.navigate('Achievements')*/}
+                {/*    }}>*/}
+                {/*    <Text style={{color:'#000'}}>Achievement Tab</Text>*/}
+                {/*</TouchableOpacity>*/}
             </View>
         );
     }

@@ -3,6 +3,7 @@ import {View} from "react-native";
 
 import {NavigationContainer} from "@react-navigation/native";
 import {createMaterialTopTabNavigator} from "@react-navigation/material-top-tabs";
+import {createStackNavigator} from "@react-navigation/stack";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import Home from "./screens/Home"
@@ -11,30 +12,38 @@ import Skills from "./screens/Skills";
 import Project from "./screens/Project";
 import Achievement from "./screens/Achievement";
 
+
 const Tab = createMaterialTopTabNavigator();
 const TopTab = createMaterialTopTabNavigator();
+// const RootStack = createStackNavigator();
 
 
 export default class App extends Component {
 
     createTopBar() {
         return (
-            <View style={{
-                flex: 1,
-            }}>
-                <TopTab.Navigator
-                    tabBarPosition={'bottom'}
-                    tabBarOptions={{
-                        showIcon: true,
-                        activeTintColor: 'blue',
-                        inactiveTintColor: 'black',
-                    }}>
-                    <TopTab.Screen name="Projects" component={Project}/>
-                    <TopTab.Screen name="Achievements" component={Achievement}/>
-                </TopTab.Navigator>
-            </View>
+            <TopTab.Navigator
+                tabBarPosition={'bottom'}
+                tabBarOptions={{
+                    showIcon: true,
+                    activeTintColor: 'blue',
+                    inactiveTintColor: 'black',
+                }}>
+                <TopTab.Screen name="Projects" component={Project}/>
+                <TopTab.Screen name="Achievements" component={Achievement}/>
+            </TopTab.Navigator>
+
         );
     }
+
+    /*createStack = () => {
+        return (
+            <RootStack.Navigator initialRouteName={Project}>
+                <RootStack.Screen name="Projects" component={Project}/>
+                <RootStack.Screen name="Achievements" component={Achievement}/>
+            </RootStack.Navigator>
+        )
+    }*/
 
     render() {
         return (

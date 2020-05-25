@@ -8,8 +8,8 @@ import Firebase from "../FirebaseConfig";
 import AchievementCard from "../component/AchievementCard";
 
 export default class Achievement extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             list: []
         };
@@ -28,16 +28,13 @@ export default class Achievement extends Component {
         });
     }
 
-    dataToRender = () => {
-        return [...this.state.list];
-    }
     render() {
         return (
             <View style={styles.AchievementContainer}>
                 <View style={styles.AchievementList}>
                     <FlatList
                         showsVerticalScrollIndicator={false}
-                        data={this.dataToRender()}
+                        data={[...this.state.list]}
                         renderItem={({item}) =>AchievementCard(item)}
                     />
                 </View>

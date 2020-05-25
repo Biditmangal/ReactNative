@@ -5,8 +5,8 @@ import Firebase from "../FirebaseConfig";
 import SkillCard from "../component/SkillCard";
 
 export default class Skills extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             skills: [],
         };
@@ -24,10 +24,6 @@ export default class Skills extends Component {
                 skills: data,
             });
         });
-    }
-
-    dataToRender = () => {
-        return [...this.state.skills];
     }
 
     // separator=()=>{
@@ -50,7 +46,7 @@ export default class Skills extends Component {
                 <View style={styles.SkillBody}>
                     <View style={styles.SkillList}>
                         <FlatList
-                            data={this.dataToRender()}
+                            data={[...this.state.skills]}
                             renderItem={({item}) => SkillCard(item)}
                             showsVerticalScrollIndicator={false}
                             // ItemSeparatorComponent={this.separator}

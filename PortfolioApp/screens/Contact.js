@@ -10,8 +10,8 @@ import Firebase from "../FirebaseConfig";
 
 export default class Contact extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             name: '',
             email: '',
@@ -92,7 +92,7 @@ export default class Contact extends Component {
                 />
                 <TouchableOpacity
                     style={styles.submitButton}
-                    onPress={this.submitHandler}
+                    onPress={() => this.submitHandler}
                 >
                     <Text style={{
                         color: 'white',
