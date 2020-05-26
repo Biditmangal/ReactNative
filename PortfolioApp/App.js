@@ -20,14 +20,52 @@ const TopTab = createMaterialTopTabNavigator();
 
 export default class App extends Component {
 
+    createRootTabNavigator = () => {
+        return (
+            <Tab.Navigator
+                tabBarPosition={'bottom'}
+                tabBarOptions={{
+                    showIcon: true,
+                    activeTintColor: 'blue',
+                    inactiveTintColor: '#000',
+                    swipeEnabled: false,
+                }}>
+                <Tab.Screen
+                    name="Home"
+                    component={Home}
+                    options={{
+                        tabBarIcon: () => (<Icon style={{color: '#000',}} size={27} name={'home'}/>)
+                    }}/>
+                <Tab.Screen
+                    name="Work"
+                    children={this.createTopBar}
+                    options={{
+                        tabBarIcon: () => (<Icon style={{color: '#000'}} size={25} name={'briefcase'}/>)
+                    }}/>
+                <Tab.Screen
+                    name="Skills"
+                    component={Skills}
+                    options={{
+                        tabBarIcon: () => (<Icon style={{color: '#000'}} size={25} name={'source-branch'}/>)
+                    }}/>
+                <Tab.Screen
+                    name="Contact"
+                    component={Contact}
+                    options={{
+                        tabBarIcon: () => (<Icon style={{color: '#000'}} size={25} name={'account-question'}/>)
+                    }}/>
+            </Tab.Navigator>
+        )
+    }
+
     createTopBar() {
         return (
             <TopTab.Navigator
                 tabBarPosition={'bottom'}
                 tabBarOptions={{
                     showIcon: true,
-                    activeTintColor: 'blue',
-                    inactiveTintColor: 'black',
+                    activeTintColor: 'rgba(40,120,200,0.9)',
+                    inactiveTintColor: '#000',
                 }}>
                 <TopTab.Screen name="Projects" component={Project}/>
                 <TopTab.Screen name="Achievements" component={Achievement}/>
@@ -48,43 +86,7 @@ export default class App extends Component {
     render() {
         return (
             <NavigationContainer>
-                <Tab.Navigator
-                    tabBarPosition={'bottom'}
-                    tabBarOptions={{
-                        showIcon: true,
-                        activeTintColor: 'blue',
-                        inactiveTintColor: 'black',
-                        swipeEnabled: false,
-                    }}>
-                    <Tab.Screen
-                        name="Home"
-                        component={Home}
-                        options={{
-                            tabBarIcon: () => (
-                                <Icon style={{color: 'black',}} size={27} name={'home'}/>)
-                        }}/>
-                    <Tab.Screen
-                        name="Work"
-                        children={this.createTopBar}
-                        options={{
-                            tabBarIcon: () => (
-                                <Icon style={{color: 'black'}} size={25} name={'briefcase'}/>)
-                        }}/>
-                    <Tab.Screen
-                        name="Skills"
-                        component={Skills}
-                        options={{
-                            tabBarIcon: () => (
-                                <Icon style={{color: 'black'}} size={25} name={'source-branch'}/>)
-                        }}/>
-                    <Tab.Screen
-                        name="Contact"
-                        component={Contact}
-                        options={{
-                            tabBarIcon: () => (
-                                <Icon style={{color: 'black'}} size={25} name={'account-question'}/>)
-                        }}/>
-                </Tab.Navigator>
+                {this.createRootTabNavigator()}
             </NavigationContainer>
         );
     }
