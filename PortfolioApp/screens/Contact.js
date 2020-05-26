@@ -37,21 +37,20 @@ export default class Contact extends Component {
         })
     }
 
-    submitHandler = (event) => {
-        event.preventDefault();
+    submitHandler = () => {
         Firebase.database().ref('Messages/').push({
             name: this.state.name,
             email: this.state.email,
             message: this.state.message
-        }).then(() =>
-            alert('Your Message has been sent')
+        }).then(() => {
+                this.setState({
+                    message: '',
+                });
+                alert('Your Message has been sent')
+            }
         ).catch((error) =>
             alert('Sorry,This happened: ' + error)
         )
-        this.setState({
-            message: '',
-        })
-
     }
     // fetchdata = () => {
     //     Firebase.database().ref('Messages/').on('value', (snapshot) => {
@@ -92,7 +91,7 @@ export default class Contact extends Component {
                 />
                 <TouchableOpacity
                     style={styles.submitButton}
-                    onPress={() => this.submitHandler}
+                    onPress={() => this.submitHandler()}
                 >
                     <Text style={{
                         color: 'white',
