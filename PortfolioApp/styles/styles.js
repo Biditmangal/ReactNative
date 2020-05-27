@@ -21,36 +21,36 @@ export const styles = StyleSheet.create({
         textTransform: 'uppercase',
         alignItems: 'center',
     },
-    ProjectBody:{
+    ProjectBody: {
         flex: 1,
         margin: 3,
-        height:10,
+        height: 10,
         padding: 5,
-        justifyContent:'center',
+        justifyContent: 'center',
     },
-    ProjectList:{
+    ProjectList: {
         flex: 1,
         padding: 20,
-        justifyContent:'center',
+        justifyContent: 'center',
     },
-    ProjectPanel:{
-        margin:10,
-        borderRadius:10,
-        height:10,
+    ProjectPanel: {
+        margin: 10,
+        borderRadius: 10,
+        height: 10,
     },
-    ProjectPanelText:{
-        margin:8,
+    ProjectPanelText: {
+        margin: 8,
     },
-    AchievementContainer:{
+    AchievementContainer: {
         flex: 1,
         margin: 3,
-        marginBottom:20,
-        height:50,
+        marginBottom: 20,
+        height: 50,
         borderRadius: 2,
         padding: 5,
-        justifyContent:'center',
+        justifyContent: 'center',
     },
-    AchievementList:{
+    AchievementList: {
         flex: 1,
         padding: 20,
         justifyContent: 'flex-start',
@@ -65,7 +65,7 @@ export const styles = StyleSheet.create({
     SkillContainer: {
         flex: 1,
         justifyContent: 'center',
-        alignItems:'center',
+        alignItems: 'center',
     },
     SkillHeader: {
         flex: 1,
@@ -78,13 +78,13 @@ export const styles = StyleSheet.create({
     SkillBody: {
         flex: 5,
         margin: 10,
-        marginBottom:20,
-        height:50,
+        marginBottom: 20,
+        height: 50,
         backgroundColor: 'white',
         borderRadius: 2,
         padding: 5,
-        justifyContent:'center',
-        width:'90%',
+        justifyContent: 'center',
+        width: '90%',
     },
     SkillList: {
         flex: 1,
