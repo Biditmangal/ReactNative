@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 import {
     View,
-    Text, Dimensions,
+    Dimensions,
 } from "react-native";
 import Firebase from "../FirebaseConfig";
 import HomePhone from "../component/HomePhone";
 import HomeBrowser from "../component/HomeBrowser";
+
 
 export default class Home extends Component {
     state = {
@@ -28,6 +29,12 @@ export default class Home extends Component {
             })
     }
 
+    navigateScreen=(name)=>{
+        return(
+            this.props.navigation.navigate(name)
+        )
+    }
+
     render() {
         return (
             <View style={{
@@ -35,8 +42,8 @@ export default class Home extends Component {
             }}>
                 {
                     Dimensions.get('screen').width > 500 ?
-                    <HomeBrowser image={this.state.image}/> :
-                    <HomePhone image={this.state.image}/>
+                        <HomeBrowser image={this.state.image} click={this.navigateScreen.bind(this)} /> :
+                        <HomePhone image={this.state.image}/>
                 }
             </View>
         );
