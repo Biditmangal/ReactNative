@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View} from "react-native";
+
 
 import {NavigationContainer} from "@react-navigation/native";
 import {createMaterialTopTabNavigator} from "@react-navigation/material-top-tabs";
@@ -15,7 +15,6 @@ import Achievement from "./screens/Achievement";
 
 const Tab = createMaterialTopTabNavigator();
 const TopTab = createMaterialTopTabNavigator();
-// const RootStack = createStackNavigator();
 
 
 export default class App extends Component {
@@ -37,16 +36,16 @@ export default class App extends Component {
                         tabBarIcon: () => (<Icon style={{color: '#000',}} size={27} name={'home'}/>)
                     }}/>
                 <Tab.Screen
-                    name="Work"
-                    children={this.createTopBar}
-                    options={{
-                        tabBarIcon: () => (<Icon style={{color: '#000'}} size={25} name={'briefcase'}/>)
-                    }}/>
-                <Tab.Screen
                     name="Skills"
                     component={Skills}
                     options={{
                         tabBarIcon: () => (<Icon style={{color: '#000'}} size={25} name={'source-branch'}/>)
+                    }}/>
+                <Tab.Screen
+                    name="Work"
+                    children={this.createTopBar}
+                    options={{
+                        tabBarIcon: () => (<Icon style={{color: '#000'}} size={25} name={'briefcase'}/>)
                     }}/>
                 <Tab.Screen
                     name="Contact"
@@ -58,7 +57,7 @@ export default class App extends Component {
         )
     }
 
-    createTopBar() {
+    createTopBar = () => {
         return (
             <TopTab.Navigator
                 tabBarPosition={'bottom'}
@@ -74,14 +73,15 @@ export default class App extends Component {
         );
     }
 
-    /*createStack = () => {
-        return (
-            <RootStack.Navigator initialRouteName={Project}>
-                <RootStack.Screen name="Projects" component={Project}/>
-                <RootStack.Screen name="Achievements" component={Achievement}/>
-            </RootStack.Navigator>
-        )
-    }*/
+    // createStack = () => {
+    //     return (
+    //         <HomeStack.Navigator initialRouteName={Home} headerMode={'none'}>
+    //             <HomeStack.Screen name="Home" component={Home}/>
+    //             <HomeStack.Screen name="Project" component={Project}/>
+    //             <HomeStack.Screen name="Achievement" component={Achievement} />
+    //         </HomeStack.Navigator>
+    //     )
+    // }
 
     render() {
         return (

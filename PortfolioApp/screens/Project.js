@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 import {
     View,
     FlatList,
-    TouchableOpacity,
-    Text,
 } from "react-native";
 import {styles} from "../styles/styles";
 import ProjectPanel from "../component/ProjectPanel";
@@ -32,6 +30,7 @@ export default class Project extends Component {
         });
     }
 
+
     render() {
         return (
             <View style={styles.ProjectBody}>
@@ -42,15 +41,6 @@ export default class Project extends Component {
                         renderItem={({item}) => ProjectPanel(item)}
                     />
                 </View>
-                {/*<TouchableOpacity*/}
-                {/*    style={{*/}
-                {/*        backgroundColor:'#fff'*/}
-                {/*    }}*/}
-                {/*    onPress={() => {*/}
-                {/*        this.props.navigation.navigate('Achievements')*/}
-                {/*    }}>*/}
-                {/*    <Text style={{color:'#000'}}>Achievement Tab</Text>*/}
-                {/*</TouchableOpacity>*/}
             </View>
         );
     }
