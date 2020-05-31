@@ -60,7 +60,7 @@ const HomeBrowser = (props) => {
                     margin: 10,
                     marginTop: 95,
                     width: 180,
-                    justifyContent: "flex-start",
+                    justifyContent: "flex-start ",
 
                 }}>
                     <TouchableOpacity style={{
@@ -139,48 +139,90 @@ const HomeBrowser = (props) => {
                 </View>
                 <View style={{
                     flex: 3,
-                    borderColor: 'red',
-                    borderWidth: 5,
                     margin: 10,
                     marginTop: 5,
                 }}>
                     <View style={{
                         flex: 1,
-                        borderColor: 'red',
-                        borderWidth: 1,
+
                     }}>
-                        <Text>About</Text>
-                        <Text>Cras id neque vel eros molestie feugiat eget nec nisi.{'\n'}
-                            Sed rhoncus magna a nisl vulputate, eget dapibus ligula ultricies.{'\n'}
-                            Praesent accumsan nibh luctus, dapibus eros nec, ullamcorper dui.{'\n'}
-                            Proin pharetra odio eget porta consectetur.{'\n'}
-                            Sed a leo porta, aliquet velit et, blandit tellus.{'\n'}</Text>
+                        <View style={{
+                            flex: 1,
+                            alignItems: "center",
+                            borderBottomColor: 'gray',
+                            borderBottomWidth: 2,
+                            marginLeft: 10,
+                            marginRight: 10,
+                            justifyContent: "center"
+                        }}>
+                            <Text style={{fontSize: 20,}}>About</Text>
+                        </View>
+                        <View style={{
+                            flex: 3,
+                            marginTop: 10,
+                            marginLeft: 10,
+                            marginRight: 10,
+                        }}>
+                            <Text>Cras id neque vel eros molestie feugiat eget nec nisi.{'\n'}
+                                Sed rhoncus magna a nisl vulputate, eget dapibus.{'\n'}
+                                Praesent accumsan nibh luctus, dapibus eros nec.{'\n'}
+                                Proin pharetra odio eget porta consectetur.{'\n'}
+                                Sed a leo porta, aliquet velit et, blandit tellus.{'\n'}</Text>
+                        </View>
                     </View>
                     <View style={{
                         flex: 1,
-                        borderColor: 'red',
-                        borderWidth: 1,
+
                     }}>
-                        <Text>Cras id neque vel eros molestie feugiat eget nec nisi.{'\n'}
-                            Sed rhoncus magna a nisl vulputate, eget dapibus ligula ultricies.{'\n'}
-                            Praesent accumsan nibh luctus, dapibus eros nec, ullamcorper dui.{'\n'}
-                            Proin pharetra odio eget porta consectetur.{'\n'}
-                            Sed a leo porta, aliquet velit et, blandit tellus.{'\n'}</Text>
+                        <View style={{
+                            flex: 1,
+                            alignItems: "center",
+                            borderBottomColor: 'gray',
+                            borderBottomWidth: 2,
+                            marginLeft: 10,
+                            marginRight: 10,
+                            justifyContent: "center"
+                        }}>
+                            <Text style={{fontSize: 20,}}>Education</Text>
+                        </View>
+                        <View style={{
+                            flex: 3,
+                            marginTop: 10,
+                            marginLeft: 10,
+                            marginRight: 10,
+                        }}>
+                            <Text>Cras id neque vel eros molestie feugiat eget nec nisi.{'\n'}
+                                Sed rhoncus magna a nisl vulputate, eget dapibus ligula ultricies.{'\n'}
+                                Praesent accumsan nibh luctus, dapibus eros nec, ullamcorper dui.{'\n'}
+                                Proin pharetra odio eget porta consectetur.{'\n'}
+                                Sed a leo porta, aliquet velit et, blandit tellus.{'\n'}</Text>
+                        </View>
+
                     </View>
                     <View style={{
                         flex: 1.5,
-                        borderColor: 'red',
-                        borderWidth: 1,
                     }}>
-                        <Text>hobbies</Text>
+                        <View style={{
+                            flex: 1,
+                            alignItems: "center",
+                            borderBottomColor: 'gray',
+                            borderBottomWidth: 2,
+                            marginLeft: 10,
+                            marginRight: 10,
+                            justifyContent: "center"
+                        }}>
+                            <Text style={{fontSize: 20,}}>HOBBIES</Text>
+                        </View>
+                        <View style={{
+                            flex: 3,
+                        }}>
+
+                        </View>
                     </View>
                 </View>
             </View>
         </View>
-
     )
-
 }
-
 
 export default HomeBrowser;

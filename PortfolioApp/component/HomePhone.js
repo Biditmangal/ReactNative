@@ -60,42 +60,90 @@ const HomePhone = (props) => {
                     </Text>
 
                     <View style={{
-                        borderColor: 'black',
-                        borderWidth: 1,
                         marginTop: 30,
                         margin: 10,
                         width: Dimensions.get('screen').width / 1.2,
                         height: Dimensions.get('window').height / 10,
                     }}>
-                        <Text>
-                            About
-                        </Text>
+                        <View style={{
+                            flex: 1,
+                            alignItems: "center",
+                            borderBottomColor: 'gray',
+                            borderBottomWidth: 2,
+                            marginLeft: 10,
+                            marginRight: 10,
+                            justifyContent: "center"
+                        }}>
+                            <Text style={{fontSize: 20,}}>ABOUT</Text>
+                        </View>
+                        <View style={{
+                            flex: 3,
+                            marginTop: 10,
+                            marginLeft: 10,
+                            marginRight: 10,
+                        }}>
+                            <Text>Cras id neque vel eros molestie feugiat eget nec nisi.{'\n'}
+                                Sed rhoncus magna a nisl vulputate, eget dapibus.{'\n'}
+                                Praesent accumsan nibh luctus, dapibus eros nec.{'\n'}
+                                Proin pharetra odio eget porta consectetur.{'\n'}
+                                Sed a leo porta, aliquet velit et, blandit tellus.{'\n'}</Text>
+                        </View>
                     </View>
                     <View style={{
-                        borderColor: 'black',
-                        borderWidth: 1,
                         margin: 10,
                         width: Dimensions.get('screen').width / 1.2,
                         height: Dimensions.get('window').height / 10,
                     }}>
-                        <Text>
-                            Education
-                        </Text>
+                        <View style={{
+                            flex: 1,
+                            alignItems: "center",
+                            borderBottomColor: 'gray',
+                            borderBottomWidth: 2,
+                            marginLeft: 10,
+                            marginRight: 10,
+                            justifyContent: "center"
+                        }}>
+                            <Text style={{fontSize: 20,}}>EDUCATION</Text>
+                        </View>
+                        <View style={{
+                            flex: 3,
+                            marginTop: 10,
+                            marginLeft: 10,
+                            marginRight: 10,
+                        }}>
+                            <Text>Cras id neque vel eros molestie feugiat eget nec nisi.{'\n'}
+                                Sed rhoncus magna a nisl vulputate, eget dapibus.{'\n'}
+                                Praesent accumsan nibh luctus, dapibus eros nec.{'\n'}
+                                Proin pharetra odio eget porta consectetur.{'\n'}
+                                Sed a leo porta, aliquet velit et, blandit tellus.{'\n'}</Text>
+                        </View>
                     </View>
                     <View style={{
-                        borderColor: 'black',
-                        borderWidth: 1,
                         margin: 10,
                         width: Dimensions.get('screen').width / 1.2,
                         height: Dimensions.get('window').height / 10 + 20,
                     }}>
-                        <Text>
-                            Hobbies
-                        </Text>
+                        <View style={{
+                            flex: 1,
+                            alignItems: "center",
+                            borderBottomColor: 'gray',
+                            borderBottomWidth: 2,
+                            marginLeft: 10,
+                            marginRight: 10,
+                            justifyContent: "center"
+                        }}>
+                            <Text style={{fontSize: 20,}}>HOBBIES</Text>
+                        </View>
+                        <View style={{
+                            flex: 3,
+                        }}>
+
+                        </View>
                     </View>
                     <View style={{
                         flexDirection: "row",
-                        marginBottom:Dimensions.get('window').height/50 ,
+                        marginBottom: Dimensions.get('window').height / 50,
+                        justifyContent: "flex-end"
                     }}>
                         <IconButton
                             icon={() => <Icon style={{color: 'rgb(0,180,200)',}} name={'twitter'} size={30}/>}

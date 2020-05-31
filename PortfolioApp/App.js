@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
-
-
 import {NavigationContainer} from "@react-navigation/native";
+
 import {createMaterialTopTabNavigator} from "@react-navigation/material-top-tabs";
-import {createStackNavigator} from "@react-navigation/stack";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import Home from "./screens/Home"

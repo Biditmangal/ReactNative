@@ -49,6 +49,7 @@ export default class Skills extends Component {
                             data={[...this.state.skills]}
                             renderItem={({item}) => SkillCard(item)}
                             showsVerticalScrollIndicator={false}
+                            keyExtractor={(item)=>{item.title}}
                             // ItemSeparatorComponent={this.separator}
                         />
                     </View>
