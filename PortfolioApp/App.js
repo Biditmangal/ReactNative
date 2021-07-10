@@ -17,6 +17,8 @@ const TopTab = createMaterialTopTabNavigator();
 
 export default class App extends Component {
 
+
+    // main tab bar for the navigation of the app
     createRootTabNavigator = () => {
         return (
             <Tab.Navigator
@@ -55,6 +57,7 @@ export default class App extends Component {
         )
     }
 
+    //navbar for the project section
     createTopBar = () => {
         return (
             <TopTab.Navigator

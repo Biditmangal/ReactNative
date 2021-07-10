@@ -6,7 +6,17 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 const HomeBrowser = (props) => {
     return (
-        <View>
+        <View style={{
+            // margin:20,
+            // shadowColor: "#000",
+            // shadowOffset: {
+            //     width: 0,
+            //     height: 10,
+            // },
+            // shadowOpacity: 0.51,
+            // shadowRadius: 13.16,
+            // elevation: 20,
+        }}>
             <View style={{
                 flex: 1,
                 height: Dimensions.get('screen').height / 4,
@@ -61,7 +71,6 @@ const HomeBrowser = (props) => {
                     marginTop: 95,
                     width: 180,
                     justifyContent: "flex-start ",
-
                 }}>
                     <TouchableOpacity style={{
                         marginTop: 20,

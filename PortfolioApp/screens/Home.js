@@ -1,51 +1,41 @@
-import React, {Component} from 'react';
-import {
-    View,
-    Dimensions,
-} from "react-native";
+import React, { useState, useEffect } from "react";
+import { Dimensions } from "react-native";
 import Firebase from "../FirebaseConfig";
 import HomePhone from "../component/HomePhone";
 import HomeBrowser from "../component/HomeBrowser";
 
+const Home = (props) => {
+	const [image, setImage] = useState(null);
 
-export default class Home extends Component {
-    state = {
-        image: '',
-    }
+	useEffect(() => {
+		fetchPhoto();
+	}, []);
 
-    componentDidMount = () => {
-        this.fetchPhoto().then()
-    }
+	const fetchPhoto = async () => {
+		const url = Firebase.storage().ref("PersonalPhoto.jpg");
+		await url
+			.getDownloadURL()
+			.then((data) => {
+				setImage(data);
+			})
+			.catch((e) => {
+				console.error(e);
+			});
+	};
 
-    async fetchPhoto() {
-        const url = Firebase.storage().ref('PersonalPhoto.jpg');
-        await url.getDownloadURL()
-            .then(data => {
-                this.setState({
-                    image: data,
-                })
-            }).catch(e => {
-                console.log(e);
-            })
-    }
+	const navigateScreen = (name) => {
+		return props.navigation.navigate(name);
+	};
 
-    navigateScreen=(name)=>{
-        return(
-            this.props.navigation.navigate(name)
-        )
-    }
+	return (
+		<>
+			{Dimensions.get("screen").width > 500 ? (
+				<HomeBrowser image={image} click={navigateScreen.bind(this)} />
+			) : (
+				<HomePhone image={image} />
+			)}
+		</>
+	);
+};
 
-    render() {
-        return (
-            <View style={{
-                flex: 1,
-            }}>
-                {
-                    Dimensions.get('screen').width > 500 ?
-                        <HomeBrowser image={this.state.image} click={this.navigateScreen.bind(this)} /> :
-                        <HomePhone image={this.state.image}/>
-                }
-            </View>
-        );
-    }
-}
+export default Home;

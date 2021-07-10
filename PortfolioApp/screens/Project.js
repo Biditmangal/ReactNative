@@ -39,7 +39,7 @@ export default class Project extends Component {
                         showsVerticalScrollIndicator={false}
                         data={[...this.state.projects]}
                         renderItem={({item}) => ProjectPanel(item)}
-                        keyExtractor={(item)=>item.title}
+                        // keyExtractor={(item)=>{item.title}}
                     />
                 </View>
             </View>

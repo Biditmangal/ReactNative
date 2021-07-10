@@ -16,6 +16,7 @@ const SkillCard = (item) => {
                 flex: 1,
                 flexDirection: 'row',
                 marginTop: 10,
+                
             }}>
                 <View style={{
                     flex: 1,

@@ -35,7 +35,7 @@ export default class Achievement extends Component {
                     <FlatList
                         showsVerticalScrollIndicator={false}
                         data={[...this.state.list]}
-                        keyExtractor={(item)=>{item.name}}
+                        // keyExtractor={(item)=>{item.name}}
                         renderItem={({item}) =>AchievementCard(item)}
                     />
                 </View>

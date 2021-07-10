@@ -9,7 +9,7 @@ My Progress for the App:-
 Home  
   - [X] Profile Photo- Image
   - [X] Description-box
-  - [ ] Social Media links 
+  - [X] Social Media links 
 ---
 Work
 - [x]  A bottomBar with 2 tabs Projects and Achievements and in each Tab there will be expandable panels/cards containing details of the respective tab
